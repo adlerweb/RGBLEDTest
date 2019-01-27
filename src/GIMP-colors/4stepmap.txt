@@ -1,0 +1,68 @@
+GIMP Palette
+Name: StepMap-3
+Columns: 0
+#
+  0   0   0	Unbenannt
+  0   0  64	Unbenannt
+  0   0 128	Unbenannt
+  0   0 255	Unbenannt
+  0  64   0	Unbenannt
+  0  64  64	Unbenannt
+  0  64 128	Unbenannt
+  0  64 255	Unbenannt
+  0 128   0	Unbenannt
+  0 128  64	Unbenannt
+  0 128 128	Unbenannt
+  0 128 255	Unbenannt
+  0 255   0	Unbenannt
+  0 255  64	Unbenannt
+  0 255 128	Unbenannt
+  0 255 255	Unbenannt
+ 64   0   0	Unbenannt
+ 64   0  64	Unbenannt
+ 64   0 128	Unbenannt
+ 64   0 255	Unbenannt
+ 64  64   0	Unbenannt
+ 64  64  64	Unbenannt
+ 64  64 128	Unbenannt
+ 64  64 255	Unbenannt
+ 64 128   0	Unbenannt
+ 64 128  64	Unbenannt
+ 64 128 128	Unbenannt
+ 64 128 255	Unbenannt
+ 64 255   0	Unbenannt
+ 64 255  64	Unbenannt
+ 64 255 128	Unbenannt
+ 64 255 255	Unbenannt
+128   0   0	Unbenannt
+128   0  64	Unbenannt
+128   0 128	Unbenannt
+128   0 255	Unbenannt
+128  64   0	Unbenannt
+128  64  64	Unbenannt
+128  64 128	Unbenannt
+128  64 255	Unbenannt
+128 128   0	Unbenannt
+128 128  64	Unbenannt
+128 128 128	Unbenannt
+128 128 255	Unbenannt
+128 255   0	Unbenannt
+128 255  64	Unbenannt
+128 255 128	Unbenannt
+128 255 255	Unbenannt
+255   0   0	Unbenannt
+255   0  64	Unbenannt
+255   0 128	Unbenannt
+255   0 255	Unbenannt
+255  64   0	Unbenannt
+255  64  64	Unbenannt
+255  64 128	Unbenannt
+255  64 255	Unbenannt
+255 128   0	Unbenannt
+255 128  64	Unbenannt
+255 128 128	Unbenannt
+255 128 255	Unbenannt
+255 255   0	Unbenannt
+255 255  64	Unbenannt
+255 255 128	Unbenannt
+255 255 255	Unbenannt
