@@ -27,3 +27,8 @@ This is a sample code to control an RGB LED matrix video wall panel using a STM3
 * Save/Export as C header file (.h)
 * edit h-to-php.php and use it to convert the h-file to a precomputed mess of arrays
 * save it as logo.h or edit main.c and compile
+
+## Links (German)
+
+* https://www.adlerweb.info/blog/2019/01/27/bitbastelei-318-rgb-led-video-wall-panel-p4/
+* https://www.youtube.com/watch?v=NaAsBxi2Evs
