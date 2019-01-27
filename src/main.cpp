@@ -1,14 +1,14 @@
 #include <Arduino.h>
 
 //You can not remap pins without touching the code below
-#define DP   GPIOA
-#define PR1  PA0
-#define PG1  PA1
-#define PB1  PA2
-#define PR2  PA3
-#define PG2  PA4
-#define PB2  PA5
-#define CLK  PA6
+#define RGB_DP   GPIOA
+#define RGB_PR1  PA0
+#define RGB_PG1  PA1
+#define RGB_PB1  PA2
+#define RGB_PR2  PA3
+#define RGB_PG2  PA4
+#define RGB_PB2  PA5
+#define RGB_CLK  PA6
 
 #define A    PB3
 #define B    PB4
@@ -25,14 +25,14 @@ bool ledneu = HIGH;
 unsigned long start;
 
 void panel_selectAddr(byte addr) {
-  GPIOB->regs->BRR = 0b1111000;
-  GPIOB->regs->BSRR = addr << 3;
+  GPIOB->BRR = 0b1111000;
+  GPIOB->BSRR = addr << 3;
 }
 
 void panel_write(byte idata) {
-  digitalWrite(CLK, LOW); //@todo replace with direct GPIO registers
-  DP->regs->ODR = idata;
-  digitalWrite(CLK, HIGH); //@todo replace with direct GPIO registers
+  digitalWrite(RGB_CLK, LOW); //@todo replace with direct GPIO registers
+  RGB_DP->ODR = idata;
+  digitalWrite(RGB_CLK, HIGH); //@todo replace with direct GPIO registers
 }
 
 void panel_latch(void) {
@@ -46,20 +46,20 @@ void setup(void) {
 
   for(byte dly=0; dly <= 20; dly++) {
     //Blink LED PC13 vie ODR
-    GPIOC->regs->ODR = 0b00010000000000000;
+    GPIOC->ODR = 0b00010000000000000;
     delay(100);
-    GPIOC->regs->ODR = 0b00000000000000000;
+    GPIOC->ODR = 0b00000000000000000;
     delay(100);
   }
   Serial.print("Setup...\nModes...");
 
-  pinMode(PR1, OUTPUT);
-  pinMode(PG1, OUTPUT);
-  pinMode(PB1, OUTPUT);
-  pinMode(PR2, OUTPUT);
-  pinMode(PG2, OUTPUT);
-  pinMode(PB2, OUTPUT);
-  pinMode(CLK, OUTPUT);
+  pinMode(RGB_PR1, OUTPUT);
+  pinMode(RGB_PG1, OUTPUT);
+  pinMode(RGB_PB1, OUTPUT);
+  pinMode(RGB_PR2, OUTPUT);
+  pinMode(RGB_PG2, OUTPUT);
+  pinMode(RGB_PB2, OUTPUT);
+  pinMode(RGB_CLK, OUTPUT);
   pinMode(A, OUTPUT);
   pinMode(B, OUTPUT);
   pinMode(C, OUTPUT);
@@ -70,13 +70,13 @@ void setup(void) {
 
   Serial.print("out...");
 
-  digitalWrite(PR1, LOW);
-  digitalWrite(PG1, LOW);
-  digitalWrite(PB1, LOW);
-  digitalWrite(PR2, LOW);
-  digitalWrite(PG2, LOW);
-  digitalWrite(PB2, LOW);
-  digitalWrite(CLK, LOW);
+  digitalWrite(RGB_PR1, LOW);
+  digitalWrite(RGB_PG1, LOW);
+  digitalWrite(RGB_PB1, LOW);
+  digitalWrite(RGB_PR2, LOW);
+  digitalWrite(RGB_PG2, LOW);
+  digitalWrite(RGB_PB2, LOW);
+  digitalWrite(RGB_CLK, LOW);
   digitalWrite(A, LOW);
   digitalWrite(B, LOW);
   digitalWrite(C, LOW);
